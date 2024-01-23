@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="mb-3">
+                        <div class="section-title mb-0">
+                            <h4 class="m-0 text-uppercase font-weight-bold">Tranding News</h4>
+                        </div>
+                        <div class="bg-white border border-top-0 p-3">
+                            {% for Mahsulot in mahsulots %}
+                           <ul>
+
+                               <a href="{{Mahsulot.get_absolute_url}}"><li>{{Mahsulot.name}}</li></a>
+                               <li>{{Mahsulot.price}} $</li>
+                               <li>{{Mahsulot.status}}</li>
+                               <li>{{Mahsulot.bio}}</li>
+                               <a href=""><img class="img-fluid" style="width:600px;height:600px" src={{Mahsulot.img.url}} alt=""></a>
+                               <button type="submit">BUY NOW...</button>
+
+                           </ul>
+
+                            {% endfor %}
+                        </div>
+                    </div>
+</body>
+</html>
